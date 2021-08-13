@@ -4,15 +4,25 @@
 	<meta charset="utf-8">
 	<script>
 		// TODO: create a handler
+		function setSearchEngine(event) {
+			let pick = document.querySelector("input[name=engine]:checked");
+			let actions = {
+				"google": "https://www.google.com/",
+				"duckduckGo": "https://duckduckgo.com/",
+				"bing": "https://www.bing.com/search",
+				"ask": "https://www.ask.com/web"
+			};
+			 
+		}
     window.addEventListener("load", function(){
-        // TODO: register the handler
+        setSearchEngine();
     });
 	</script>
 </head>
 
 <body>
 
-	<form id="searchForm">
+	<form id="searchForm" method="GET" action="">
     <!-- TODO: add form elements -->
 	<input type="text" name="q" required/>
 
